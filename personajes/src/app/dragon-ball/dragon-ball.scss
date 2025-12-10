@@ -1,0 +1,67 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  justify-items: center;
+  background: radial-gradient(circle at center, #0a0a15, #000);
+}
+.dragon-background {
+  background: url('/dragon.jpg') center/cover no-repeat fixed;
+  min-height: 100vh;
+  padding: 30px;
+}
+.dragon-background h1 {
+  color: white;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 25px;
+  text-shadow: 0 0 12px rgb(0, 81, 255), 0 0 20px rgba(255, 145, 0, 0.87);
+}
+
+.card {
+  width: 240px;
+  background: rgba(15, 20, 40, 0.85);
+  border-radius: 18px;
+  padding-bottom: 15px;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 18px rgba(0,255,255,0.25),
+              inset 0 0 12px rgba(0,255,255,0.15);
+  border: 1px solid rgba(0,255,255,0.4);
+  backdrop-filter: blur(7px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 0 30px rgba(0,255,255,0.7),
+              0 0 55px rgba(0,100,255,0.4);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0,255,255,0.25);
+}
+
+.card h2 {
+  font-size: 22px;
+  margin: 12px 0 5px;
+  text-shadow: 0 0 10px cyan;
+  letter-spacing: 0.5px;
+}
+
+.card p {
+  font-size: 15px;
+  margin: 3px 0;
+  opacity: 0.85;
+}
+
